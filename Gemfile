@@ -4,6 +4,7 @@ gem 'slim-rails'
 
 group :production do
   gem 'therubyracer'
+  gem 'rb-readline'
 end
 
 
