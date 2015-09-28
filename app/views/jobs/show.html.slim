@@ -1,0 +1,24 @@
+p#notice = notice
+
+p
+  strong Url:
+  = @job.url
+p
+  strong Ref:
+  = @job.ref_id
+p
+  strong Title:
+  = @job.title
+p
+  strong Location:
+  = @job.location
+p
+  strong Category:
+  = @job.category
+p
+  strong Ticket:
+  = @job.ticket
+
+= link_to 'Edit', edit_job_path(@job)
+'|
+= link_to 'Back', jobs_path

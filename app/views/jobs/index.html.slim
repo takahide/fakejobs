@@ -1,0 +1,31 @@
+h1 Listing jobs
+
+table
+  thead
+    tr
+      th Url
+      th Ref
+      th Title
+      th Location
+      th Category
+      th Ticket
+      th
+      th
+      th
+
+  tbody
+    - @jobs.each do |job|
+      tr
+        td = job.url
+        td = job.ref_id
+        td = job.title
+        td = job.location
+        td = job.category
+        td = job.ticket
+        td = link_to 'Show', job
+        td = link_to 'Edit', edit_job_path(job)
+        td = link_to 'Destroy', job, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Job', new_job_path
