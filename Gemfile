@@ -2,6 +2,10 @@ source 'https://rubygems.org'
 
 gem 'slim-rails'
 
+group :production do
+  gem 'therubyracer'
+end
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'
