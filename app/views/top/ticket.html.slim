@@ -1,2 +1,6 @@
-- @ticket.jobs.each do |j|
-  a href="#{j.url}" j.title 
+.pagination
+  = page_entries_info @jobs
+  = paginate @jobs
+- @jobs.each do |j|
+  p
+    a href="/job-details/#{j.id}" = j.title 

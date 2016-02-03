@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'slim-rails'
+gem 'kaminari'
 
 group :production do
   gem 'therubyracer'
