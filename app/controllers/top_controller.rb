@@ -13,6 +13,6 @@ class TopController < ApplicationController
   end
 
   def job
-     @job = Job.find(params[:id])
+     @job = Job.find_by(url: params[:id])
   end
 end
