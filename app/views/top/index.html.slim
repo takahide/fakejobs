@@ -1,5 +1,6 @@
 h1 Welcome to world's #1 fake job site!
 p All the jobs on this website don't exist. Please do not apply.
 - Ticket.find_each do |t|
-  p
-    a href="job-careers/#{t.number}" #{t.number}
+  - unless t.title == ""
+    p
+      a href="job-careers/#{t.number}" #{t.number}
