@@ -2,6 +2,6 @@
   = page_entries_info @jobs
   = paginate @jobs
 div class="#{@ticket.number}"
-- @jobs.each do |j|
-  p
-    a class="#{j.ref_id}" href="/d/#{j.url}" = j.title 
+  - @jobs.each do |j|
+    p
+      a class="#{j.ref_id}" href="/d/#{j.url}" = j.title 
