@@ -3,7 +3,8 @@
   = paginate @jobs
 div class="#{@ticket.number}"
   - @jobs.each do |j|
-    p
-      a class="#{j.ref_id}" href="/d/#{j.url}" 
-        span j.title 
-        span.open.date 5/31/2016
+    div
+      a class="#{j.ref_id}" href="/d/#{j.url}" = j.title 
+      p.open.date 5/31/2016
+      p.contact.phone 090-0909-9090
+      p.email hogehoge@hogehoge.com
