@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   get '/job-careers/:number' => 'top#ticket'
   get '/d/:id' => 'top#job'
 #  get '/job-details/:id' => 'top#job'
+  get '/redirect'  => 'top#redirect'  
 end

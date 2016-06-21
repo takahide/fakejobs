@@ -3,6 +3,10 @@ class TopController < ApplicationController
 
   end
 
+  def redirect
+    redirect_to '/'
+  end
+
   def ticket
     page = 1
     if params[:page].present?
