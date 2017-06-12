@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'slim-rails'
 gem 'kaminari'
+gem 'natto'
 
 group :production do
   gem 'therubyracer'

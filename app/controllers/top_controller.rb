@@ -19,4 +19,16 @@ class TopController < ApplicationController
   def job
      @job = Job.find_by(url: params[:id])
   end
+
+  def mecab
+    text = params[:word]
+
+    nm = Natto::MeCab.new
+    result = []
+    nm.parse(text) do |n|
+      result.push "#{n.surface}\t#{n.feature}"
+    end
+
+    render json: result
+  end
 end
