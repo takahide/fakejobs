@@ -24,11 +24,17 @@ class TopController < ApplicationController
     text = params[:word]
 
     nm = Natto::MeCab.new
-    result = []
+    katakana = ""
     nm.parse(text) do |n|
-      result.push "#{n.surface}\t#{n.feature}"
+      yomi = n.feature.split(",")[-2]
+      if yomi == "*"
+        yomi = n.surface
+      end
+      katakana += yomi
     end
 
-    render json: result
+    hiragana = katakana.tr('ァ-ンーヴ', 'ぁ-んーゔ')
+
+    render json: { hiragana: hiragana }
   end
 end
