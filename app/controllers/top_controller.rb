@@ -35,6 +35,6 @@ class TopController < ApplicationController
 
     hiragana = katakana.tr('ァ-ンーヴ', 'ぁ-んーゔ')
 
-    render text: "jsonCallback({ hiragana: '#{hiragana}' })"
+    render json: { hiragana: hiragana }, callback: "jsonCallback"
   end
 end
