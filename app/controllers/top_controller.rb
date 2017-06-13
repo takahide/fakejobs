@@ -1,4 +1,6 @@
 class TopController < ApplicationController
+  protect_from_forgery except: :mecab
+
   def index
 
   end
